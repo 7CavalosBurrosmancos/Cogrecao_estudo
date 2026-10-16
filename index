@@ -31,16 +31,13 @@
             text-align: center;
         }
 
-        .emblema-container {
-            display: inline-block;
-            margin: 0 auto;
-        }
-
-        .emblema-svg {
-            width: 180px;
+        .emblema-header {
+            max-width: 200px;
+            width: 100%;
             height: auto;
-            max-width: 100%;
-            filter: drop-shadow(0px 0px 8px rgba(212, 175, 55, 0.4));
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0px 0px 8px rgba(212, 175, 55, 0.3));
         }
 
         .slogan-principal {
@@ -105,7 +102,6 @@
             padding: 15px;
         }
 
-        /* Estilos do Quiz */
         .quiz-container {
             background-color: #1a1a1a;
             padding: 20px;
@@ -158,285 +154,296 @@
 <body>
 
 <header>
-    <div class="emblema-container">
-        <!-- Emblema Vetorizado Incorporado Directamente -->
-        <svg class="emblema-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="ouroGradiente" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FBF5B7"/>
-                    <stop offset="25%" stop-color="#D4AF37"/>
-                    <stop offset="50%" stop-color="#AA7C11"/>
-                    <stop offset="75%" stop-color="#E6C65B"/>
-                    <stop offset="100%" stop-color="#8B6508"/>
-                </linearGradient>
-            </defs>
+    <!-- Imagem da Logomarca Embutida em Formato SVG Nativo -->
+    <svg class="emblema-header" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="ouroDourado" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE680"/>
+                <stop offset="30%" stop-color="#D4AF37"/>
+                <stop offset="60%" stop-color="#AA7C11"/>
+                <stop offset="85%" stop-color="#E6C65B"/>
+                <stop offset="100%" stop-color="#8B6508"/>
+            </linearGradient>
+            <filter id="brilho">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+        </defs>
 
-            <!-- Coroa Superior -->
-            <path d="M110,40 L125,60 L150,30 L175,60 L190,40 L180,75 L120,75 Z" fill="url(#ouroGradiente)"/>
+        <!-- Coroa Dourada -->
+        <path d="M150,55 L165,80 L200,45 L235,80 L250,55 L240,95 L160,95 Z" fill="url(#ouroDourado)" filter="url(#brilho)"/>
+        <circle cx="150" cy="50" r="4" fill="#FFF"/>
+        <circle cx="200" cy="40" r="5" fill="#FFF"/>
+        <circle cx="250" cy="50" r="4" fill="#FFF"/>
 
-            <!-- Ramos de Louro Esquerda -->
-            <path d="M60,150 C50,110 80,70 110,60 C90,80 80,110 85,140 C75,120 65,135 60,150" fill="url(#ouroGradiente)"/>
-            <path d="M55,180 C45,140 65,100 90,80 C80,100 80,130 95,160 C80,150 70,165 55,180" fill="url(#ouroGradiente)"/>
-            
-            <!-- Ramos de Louro Direita -->
-            <path d="M240,150 C250,110 220,70 190,60 C210,80 220,110 215,140 C225,120 235,135 240,150" fill="url(#ouroGradiente)"/>
-            <path d="M245,180 C255,140 235,100 210,80 C220,100 220,130 205,160 C220,150 230,165 245,180" fill="url(#ouroGradiente)"/>
+        <!-- Ramos de Louro Esquerda -->
+        <g fill="url(#ouroDourado)">
+            <path d="M80,190 C70,140 100,90 140,80 C115,105 105,140 110,180 C98,155 88,172 80,190 Z"/>
+            <path d="M75,230 C60,180 85,130 118,105 C105,130 105,168 125,205 C105,192 92,210 75,230 Z"/>
+            <path d="M85,265 C70,225 90,175 125,140 C115,168 120,205 145,238 C122,230 108,248 85,265 Z"/>
+        </g>
 
-            <!-- Círculo e Moldura -->
-            <circle cx="150" cy="150" r="110" fill="none" stroke="url(#ouroGradiente)" stroke-width="6"/>
-            <circle cx="150" cy="150" r="102" fill="none" stroke="url(#ouroGradiente)" stroke-width="2"/>
+        <!-- Ramos de Louro Direita -->
+        <g fill="url(#ouroDourado)">
+            <path d="M320,190 C330,140 300,90 260,80 C285,105 295,140 290,180 C302,155 312,172 320,190 Z"/>
+            <path d="M325,230 C340,180 315,130 282,105 C295,130 295,168 275,205 C295,192 308,210 325,230 Z"/>
+            <path d="M315,265 C330,225 310,175 275,140 C285,168 280,205 255,238 C278,230 292,248 315,265 Z"/>
+        </g>
 
-            <!-- Templo/Fachada -->
-            <path d="M100,140 L150,110 L200,140 L195,145 L105,145 Z" fill="url(#ouroGradiente)"/>
-            <rect x="108" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
-            <rect x="125" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
-            <rect x="142" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
-            <rect x="159" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
-            <rect x="176" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
-            <rect x="102" y="183" width="96" height="8" fill="url(#ouroGradiente)"/>
+        <!-- Molduras Circulares -->
+        <circle cx="200" cy="195" r="130" fill="none" stroke="url(#ouroDourado)" stroke-width="7"/>
+        <circle cx="200" cy="195" r="120" fill="none" stroke="url(#ouroDourado)" stroke-width="2"/>
 
-            <!-- Inscrições em Arco e Texto Integrado -->
-            <text x="150" y="98" font-family="'Georgia', serif" font-size="16" font-weight="bold" fill="url(#ouroGradiente)" text-anchor="middle">JESUS CRISTO</text>
-            <text x="150" y="215" font-family="'Georgia', serif" font-size="12" font-weight="bold" fill="url(#ouroGradiente)" text-anchor="middle">COMUM CONGREGAÇÃO</text>
-            <text x="150" y="235" font-family="'Georgia', serif" font-size="11" font-weight="bold" fill="url(#ouroGradiente)" text-anchor="middle">EM JESUS CRISTO</text>
-        </svg>
-    </div>
+        <!-- Templo / Igreja -->
+        <polygon points="135,170 200,130 265,170 260,177 140,177" fill="url(#ouroDourado)"/>
+        <rect x="145" y="180" width="10" height="45" fill="url(#ouroDourado)"/>
+        <rect x="167" y="180" width="10" height="45" fill="url(#ouroDourado)"/>
+        <rect x="189" y="180" width="10" height="45" fill="url(#ouroDourado)"/>
+        <rect x="211" y="180" width="10" height="45" fill="url(#ouroDourado)"/>
+        <rect x="233" y="180" width="10" height="45" fill="url(#ouroDourado)"/>
+        <rect x="138" y="225" width="124" height="12" fill="url(#ouroDourado)"/>
+
+        <!-- Textos no Emblema -->
+        <text x="200" y="118" font-family="'Georgia', serif" font-size="20" font-weight="bold" fill="url(#ouroDourado)" text-anchor="middle" letter-spacing="2">JESUS CRISTO</text>
+        <text x="200" y="260" font-family="'Georgia', serif" font-size="16" font-weight="bold" fill="url(#ouroDourado)" text-anchor="middle" letter-spacing="1">COMUM CONGREGAÇÃO</text>
+        <text x="200" y="282" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="url(#ouroDourado)" text-anchor="middle" letter-spacing="1">EM JESUS CRISTO</text>
+    </svg>
     <div class="slogan-principal">A Paz de Deus no grato amor de Jesus Cristo</div>
 </header>
 
-    <nav>
-        <button onclick="abrirPagina('pagina-inicio')" class="ativo" id="btn-inicio">Início</button>
-        <button onclick="abrirPagina('pagina-quem-somos')" id="btn-quem-somos">Quem Nós Somos</button>
-        <button onclick="abrirPagina('pagina-cultos')" id="btn-cultos">Cultos</button>
-        <button onclick="abrirPagina('pagina-aulas')" id="btn-aulas">Nossas Aulas Bíblicas & Quiz</button>
-        <button onclick="abrirPagina('pagina-contatos')" id="btn-contatos">Contatos</button>
-    </nav>
+<nav>
+    <button onclick="abrirPagina('pagina-inicio')" class="ativo" id="btn-inicio">Início</button>
+    <button onclick="abrirPagina('pagina-quem-somos')" id="btn-quem-somos">Quem Nós Somos</button>
+    <button onclick="abrirPagina('pagina-cultos')" id="btn-cultos">Cultos</button>
+    <button onclick="abrirPagina('pagina-aulas')" id="btn-aulas">Nossas Aulas Bíblicas & Quiz</button>
+    <button onclick="abrirPagina('pagina-contatos')" id="btn-contatos">Contatos</button>
+</nav>
 
-    <!-- Página 1: Início -->
-    <div id="pagina-inicio" class="conteudo-pagina ativo">
-        <h2>Seja Bem-Vindo à Comum Congregação em Jesus Cristo</h2>
-        <p style="text-align: center; font-style: italic;">"Graça e paz de Deus vos sejam multiplicada em vossas vidas, no pleno conhecimento de Deus e de Jesus, nosso Senhor." (2 Pedro 1:2)</p>
-        
-        <div class="destaque-presidencia">
-            <h3>Saudação do Ancião Presidente</h3>
-            <p>Amada irmandade e caros Cooperadores em Jesus Cristo, que a Paz de Deus reine em cada lar. Este portal foi preparado para a edificação da nossa fé, estudo da Palavra e comunhão na santa doutrina.</p>
-            <p><strong>Ancião Éber Silos</strong><br>Presidente da Comum Congregação em Jesus Cristo</p>
+<!-- Página 1: Início -->
+<div id="pagina-inicio" class="conteudo-pagina ativo">
+    <h2>Seja Bem-Vindo à Comum Congregação em Jesus Cristo</h2>
+    <p style="text-align: center; font-style: italic;">"Graça e paz de Deus vos sejam multiplicada em vossas vidas, no pleno conhecimento de Deus e de Jesus, nosso Senhor." (2 Pedro 1:2)</p>
+    
+    <div class="destaque-presidencia">
+        <h3>Saudação do Ancião Presidente</h3>
+        <p>Amada irmandade e caros Cooperadores em Jesus Cristo, que a Paz de Deus reine em cada lar. Este portal foi preparado para a edificação da nossa fé, estudo da Palavra e comunhão na santa doutrina.</p>
+        <p><strong>Ancião Éber Silos</strong><br>Presidente da Comum Congregação em Jesus Cristo</p>
+    </div>
+</div>
+
+<!-- Página 2: Quem Nós Somos -->
+<div id="pagina-quem-somos" class="conteudo-pagina">
+    <h2>Quem Nós Somos</h2>
+    <p>A Comum Congregação em Jesus Cristo nasceu do sincero desejo de servir a Deus com simplicidade, ordem e zelo pela doutrina revelada nas Sagradas Escrituras. Sob a presidência do Ancião Éber Silos, nossa casa de oração mantém firme em cultivar e conservar a cultura de fé, comunhão e amor ao próximo.</p>
+    
+    <p>Reconhecemos que a obra não é feita por mãos nem por vanglória humana, mas pelo poder do Espírito Santo que habita em cada coração regenerado. Nossos irmãos que servem com humildade no púlpito, sendo reconhecidos com amor como cooperadores em Jesus Cristo, dedicando-se à exortação, ao aconselhamento e à doutrina.</p>
+
+    <h3>Nossos Princípios Doutrinários</h3>
+    <ul>
+        <li><strong>A Palavra de Deus:</strong> A Bíblia Sagrada como única doutrina infalível de fé e conduta.</li>
+        <li><strong>A Graça de Jesus Cristo:</strong> A salvação mediante a fé e o sacrifício de nosso Senhor Jesus Cristo na cruz.</li>
+        <li><strong>A Ordem no Púlpito:</strong> O serviço sagrado exercido com reverência e temor pelos cooperadores em Jesus Cristo.</li>
+        <li><strong>A Unidade da Irmandade:</strong> O vínculo da paz, da caridade e comunhão, unindo toda a igreja.</li>
+    </ul>
+</div>
+
+<!-- Página 3: Cultos -->
+<div id="pagina-cultos" class="conteudo-pagina">
+    <h2>Horários de Cultos e Reuniões</h2>
+    <p>Convidamos toda a amada irmandade e visitantes a estarem conosco para adorar ao Altíssimo.</p>
+    
+    <table style="width:100%; border-collapse: collapse; margin-top: 20px; color: var(--texto-claro);">
+        <thead>
+            <tr style="border-bottom: 2px solid var(--ouro-principal); color: var(--ouro-principal);">
+                <th style="padding: 10px; text-align: left;">Dia</th>
+                <th style="padding: 10px; text-align: left;">Horário</th>
+                <th style="padding: 10px; text-align: left;">Serviço Sagrado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;">Sábado</td>
+                <td style="padding: 10px;">19:30</td>
+                <td style="padding: 10px;">Culto de Louvor a Deus e Exortação da Palavra</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;">Domingo</td>
+                <td style="padding: 10px;">17:30</td>
+                <td style="padding: 10px;">Culto de Louvor a Deus e Exortação da Palavra</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;">Segunda-Feira</td>
+                <td style="padding: 10px;">20:30</td>
+                <td style="padding: 10px;">Reunião de leitura Bíblica e Ensinamento</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 30px; text-align: center; font-style: italic;">
+        <p>"Guardai o vosso pé, quando entrardes na casa de Deus; porque chegar-se para ouvir é melhor do que oferecer sacrifícios de tolos." (Eclesiastes 5:1)</p>
+    </div>
+</div>
+
+<!-- Página 4: Nossas Aulas Bíblicas & Quiz -->
+<div id="pagina-aulas" class="conteudo-pagina">
+    <h2>Nossas Aulas Bíblicas & Quiz do Novo Testamento</h2>
+    <p>Espaço dedicado ao estudo dos temas dos capítulos dos livros do Novo Testamento para a edificação da irmandade e dos Operadores em Jesus Cristo.</p>
+
+    <div class="quiz-container">
+        <h3>Questionário Bíblico por Livros e Capítulos</h3>
+        <label for="select-livro" style="color: var(--ouro-claro);">Escolha o Livro do Novo Testamento:</label>
+        <select id="select-livro" style="width: 100%; padding: 10px; margin: 10px 0; background: #262626; color: #fff; border: 1px solid var(--borda-dourada);">
+            <option value="Mateus">Evangelho de Mateus</option>
+            <option value="Marcos">Evangelho de Marcos</option>
+            <option value="Lucas">Evangelho de Lucas</option>
+            <option value="Joao">Evangelho de João</option>
+            <option value="Atos">Atos dos Apóstolos</option>
+            <option value="Romanos">Epístola aos Romanos</option>
+        </select>
+
+        <button onclick="iniciarQuiz()" style="width:100%; padding: 12px; background: var(--ouro-principal); border: none; font-weight: bold; cursor: pointer; margin-top: 10px;">Iniciar Quiz</button>
+
+        <div id="area-pergunta" style="display:none; margin-top: 20px;">
+            <h4 id="titulo-capitulo" style="color: var(--ouro-claro);"></h4>
+            <p id="texto-pergunta" style="font-size: 1.1rem;"></p>
+            <div id="opcoes-respostas"></div>
+            <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
         </div>
-    </div>
 
-    <!-- Página 2: Quem Nós Somos -->
-    <div id="pagina-quem-somos" class="conteudo-pagina">
-        <h2>Quem Nós Somos</h2>
-        <p>A Comum Congregação em Jesus Cristo nasceu do sincero desejo de servir a Deus com simplicidade, ordem e zelo pela doutrina revelada nas Sagradas Escrituras. Sob a presidência do Ancião Éber Silos, nossa casa de oração mantém firme em cultivar e conservar a cultura de fé, comunhão e amor ao próximo.</p>
+        <div id="area-resultado" style="display:none;" class="resultado-box"></div>
+    </div>
+</div>
+
+<!-- Página 5: Contatos -->
+<div id="pagina-contatos" class="conteudo-pagina">
+    <h2>Contatos e Pedidos de Oração</h2>
+    <p>A amada irmandade pode enviar pedidos de oração e mensagens para a nossa casa de oração.</p>
+
+    <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+        <input type="text" placeholder="Seu Nome Completo" style="padding: 10px; background: #262626; border: 1px solid #404040; color: #fff;">
+        <input type="email" placeholder="Seu E-mail ou Telefone" style="padding: 10px; background: #262626; border: 1px solid #404040; color: #fff;">
+        <textarea rows="5" placeholder="Escreva seu pedido de oração ou mensagem..." style="padding: 10px; background: #262626; border: 1px solid #404040; color: #fff;"></textarea>
+        <button type="button" onclick="alert('Pedido enviado com sucesso! Estaremos em oração.')" style="padding: 12px; background: var(--ouro-principal); border: none; font-weight: bold; cursor: pointer;">Enviar Mensagem</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; Comum Congregação em Jesus Cristo. Presidência: Ancião Éber Silos.</p>
+    <p>A Paz de Deus no grato amor de Jesus Cristo.</p>
+</footer>
+
+<script>
+    function abrirPagina(idPagina) {
+        const paginas = document.querySelectorAll('.conteudo-pagina');
+        paginas.forEach(p => p.classList.remove('ativo'));
+
+        const botoes = document.querySelectorAll('nav button');
+        botoes.forEach(b => b.classList.remove('ativo'));
+
+        document.getElementById(idPagina).classList.add('ativo');
         
-        <p>Reconhecemos que a obra não é feita por mãos nem por vanglória humana, mas pelo poder do Espírito Santo que habita em cada coração regenerado. Nossos irmãos que servem com humildade no púlpito, sendo reconhecidos com amor como cooperadores em Jesus Cristo, dedicando-se à exortação, ao aconselhamento e à doutrina.</p>
+        if(idPagina === 'pagina-inicio') document.getElementById('btn-inicio').classList.add('ativo');
+        if(idPagina === 'pagina-quem-somos') document.getElementById('btn-quem-somos').classList.add('ativo');
+        if(idPagina === 'pagina-cultos') document.getElementById('btn-cultos').classList.add('ativo');
+        if(idPagina === 'pagina-aulas') document.getElementById('btn-aulas').classList.add('ativo');
+        if(idPagina === 'pagina-contatos') document.getElementById('btn-contatos').classList.add('ativo');
+    }
 
-        <h3>Nossos Princípios Doutrinários</h3>
-        <ul>
-            <li><strong>A Palavra de Deus:</strong> A Bíblia Sagrada como única doutrina infalível de fé e conduta.</li>
-            <li><strong>A Graça de Jesus Cristo:</strong> A salvação mediante a fé e o sacrifício de nosso Senhor Jesus Cristo na cruz.</li>
-            <li><strong>A Ordem no Púlpito:</strong> O serviço sagrado exercido com reverência e temor pelos cooperadores em Jesus Cristo.</li>
-            <li><strong>A Unidade da Irmandade:</strong> O vínculo da paz, da caridade e comunhão, unindo toda a igreja.</li>
-        </ul>
-    </div>
+    const bancoPerguntas = {
+        "Mateus": [
+            { capitulo: "Mateus Cap. 1", pergunta: "Qual é o tema principal do Capítulo 1 do Evangelho de Mateus?", opcoes: ["A genealogia de Jesus e o nascimento de Cristo", "O Sermão da Montanha", "O Batismo no Jordão", "A Parábola do Semeador"], correta: 0 },
+            { capitulo: "Mateus Cap. 13", pergunta: "Qual parábola dá início ao ensino sobre o Reino de Deus na terra em Mateus 13?", opcoes: ["O Tesouro Escondido", "A Parábola do Semeador", "A Pérola de Grande Valor", "A Rede Lançada"], correta: 1 }
+        ],
+        "Romanos": [
+            { capitulo: "Romanos Cap. 1", pergunta: "Qual tema o apóstolo Paulo aborda logo na introdução de Romanos 1?", opcoes: ["A ceia do Senhor", "O poder do Evangelho para a salvação de todo aquele que crê", "A lei do dízimo", "A ordem dos cultos"], correta: 1 }
+        ]
+    };
 
-    <!-- Página 3: Cultos -->
-    <div id="pagina-cultos" class="conteudo-pagina">
-        <h2>Horários de Cultos e Reuniões</h2>
-        <p>Convidamos toda a amada irmandade e visitantes a estarem conosco para adorar ao Altíssimo.</p>
+    let perguntasAtuais = [];
+    let indicePergunta = 0;
+    let pontuacao = 0;
+
+    function iniciarQuiz() {
+        const livro = document.getElementById('select-livro').value;
+        perguntasAtuais = bancoPerguntas[livro] || [];
         
-        <table style="width:100%; border-collapse: collapse; margin-top: 20px; color: var(--texto-claro);">
-            <thead>
-                <tr style="border-bottom: 2px solid var(--ouro-principal); color: var(--ouro-principal);">
-                    <th style="padding: 10px; text-align: left;">Dia</th>
-                    <th style="padding: 10px; text-align: left;">Horário</th>
-                    <th style="padding: 10px; text-align: left;">Serviço Sagrado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="border-bottom: 1px solid #333;">
-                    <td style="padding: 10px;">Sábado</td>
-                    <td style="padding: 10px;">19:30</td>
-                    <td style="padding: 10px;">Culto de Louvor a Deus e Exortação da Palavra</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #333;">
-                    <td style="padding: 10px;">Domingo</td>
-                    <td style="padding: 10px;">17:30</td>
-                    <td style="padding: 10px;">Culto de Louvor a Deus e Exortação da Palavra</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #333;">
-                    <td style="padding: 10px;">Segunda-Feira</td>
-                    <td style="padding: 10px;">20:30</td>
-                    <td style="padding: 10px;">Reunião de leitura Bíblica e Ensinamento</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div style="margin-top: 30px; text-align: center; font-style: italic;">
-            <p>"Guardai o vosso pé, quando entrardes na casa de Deus; porque chegar-se para ouvir é melhor do que oferecer sacrifícios de tolos." (Eclesiastes 5:1)</p>
-        </div>
-    </div>
-
-    <!-- Página 4: Nossas Aulas Bíblicas & Quiz -->
-    <div id="pagina-aulas" class="conteudo-pagina">
-        <h2>Nossas Aulas Bíblicas & Quiz do Novo Testamento</h2>
-        <p>Espaço dedicado ao estudo dos temas dos capítulos dos livros do Novo Testamento para a edificação da irmandade e dos Operadores em Jesus Cristo.</p>
-
-        <div class="quiz-container">
-            <h3>Questionário Bíblico por Livros e Capítulos</h3>
-            <label for="select-livro" style="color: var(--ouro-claro);">Escolha o Livro do Novo Testamento:</label>
-            <select id="select-livro" style="width: 100%; padding: 10px; margin: 10px 0; background: #262626; color: #fff; border: 1px solid var(--borda-dourada);">
-                <option value="Mateus">Evangelho de Mateus</option>
-                <option value="Marcos">Evangelho de Marcos</option>
-                <option value="Lucas">Evangelho de Lucas</option>
-                <option value="Joao">Evangelho de João</option>
-                <option value="Atos">Atos dos Apóstolos</option>
-                <option value="Romanos">Epístola aos Romanos</option>
-            </select>
-
-            <button onclick="iniciarQuiz()" style="width:100%; padding: 12px; background: var(--ouro-principal); border: none; font-weight: bold; cursor: pointer; margin-top: 10px;">Iniciar Quiz</button>
-
-            <div id="area-pergunta" style="display:none; margin-top: 20px;">
-                <h4 id="titulo-capitulo" style="color: var(--ouro-claro);"></h4>
-                <p id="texto-pergunta" style="font-size: 1.1rem;"></p>
-                <div id="opcoes-respostas"></div>
-                <div id="feedback" style="margin-top: 15px; font-weight: bold;"></div>
-            </div>
-
-            <div id="area-resultado" style="display:none;" class="resultado-box"></div>
-        </div>
-    </div>
-
-    <!-- Página 5: Contatos -->
-    <div id="pagina-contatos" class="conteudo-pagina">
-        <h2>Contatos e Pedidos de Oração</h2>
-        <p>A amada irmandade pode enviar pedidos de oração e mensagens para a nossa casa de oração.</p>
-
-        <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-            <input type="text" placeholder="Seu Nome Completo" style="padding: 10px; background: #262626; border: 1px solid #404040; color: #fff;">
-            <input type="email" placeholder="Seu E-mail ou Telefone" style="padding: 10px; background: #262626; border: 1px solid #404040; color: #fff;">
-            <textarea rows="5" placeholder="Escreva seu pedido de oração ou mensagem..." style="padding: 10px; background: #262626; border: 1px solid #404040; color: #fff;"></textarea>
-            <button type="button" onclick="alert('Pedido enviado com sucesso! Estaremos em oração.')" style="padding: 12px; background: var(--ouro-principal); border: none; font-weight: bold; cursor: pointer;">Enviar Mensagem</button>
-        </form>
-    </div>
-
-    <footer>
-        <p>&copy; Comum Congregação em Jesus Cristo. Presidência: Ancião Éber Silos.</p>
-        <p>A Paz de Deus no grato amor de Jesus Cristo.</p>
-    </footer>
-
-    <script>
-        function abrirPagina(idPagina) {
-            const paginas = document.querySelectorAll('.conteudo-pagina');
-            paginas.forEach(p => p.classList.remove('ativo'));
-
-            const botoes = document.querySelectorAll('nav button');
-            botoes.forEach(b => b.classList.remove('ativo'));
-
-            document.getElementById(idPagina).classList.add('ativo');
-            
-            if(idPagina === 'pagina-inicio') document.getElementById('btn-inicio').classList.add('ativo');
-            if(idPagina === 'pagina-quem-somos') document.getElementById('btn-quem-somos').classList.add('ativo');
-            if(idPagina === 'pagina-cultos') document.getElementById('btn-cultos').classList.add('ativo');
-            if(idPagina === 'pagina-aulas') document.getElementById('btn-aulas').classList.add('ativo');
-            if(idPagina === 'pagina-contatos') document.getElementById('btn-contatos').classList.add('ativo');
+        if(perguntasAtuais.length === 0) {
+            alert("Em breve mais questões para este livro!");
+            return;
         }
 
-        const bancoPerguntas = {
-            "Mateus": [
-                { capitulo: "Mateus Cap. 1", pergunta: "Qual é o tema principal do Capítulo 1 do Evangelho de Mateus?", opcoes: ["A genealogia de Jesus e o nascimento de Cristo", "O Sermão da Montanha", "O Batismo no Jordão", "A Parábola do Semeador"], correta: 0 },
-                { capitulo: "Mateus Cap. 13", pergunta: "Qual parábola dá início ao ensino sobre o Reino de Deus na terra em Mateus 13?", opcoes: ["O Tesouro Escondido", "A Parábola do Semeador", "A Pérola de Grande Valor", "A Rede Lançada"], correta: 1 }
-            ],
-            "Romanos": [
-                { capitulo: "Romanos Cap. 1", pergunta: "Qual tema o apóstolo Paulo aborda logo na introdução de Romanos 1?", opcoes: ["A ceia do Senhor", "O poder do Evangelho para a salvação de todo aquele que crê", "A lei do dízimo", "A ordem dos cultos"], correta: 1 }
-            ]
-        };
+        indicePergunta = 0;
+        pontuacao = 0;
+        document.getElementById('area-resultado').style.display = 'none';
+        document.getElementById('area-pergunta').style.display = 'block';
+        carregarPergunta();
+    }
 
-        let perguntasAtuais = [];
-        let indicePergunta = 0;
-        let pontuacao = 0;
+    function carregarPergunta() {
+        document.getElementById('feedback').innerText = '';
+        const q = perguntasAtuais[indicePergunta];
+        document.getElementById('titulo-capitulo').innerText = q.capitulo;
+        document.getElementById('texto-pergunta').innerText = q.pergunta;
 
-        function iniciarQuiz() {
-            const livro = document.getElementById('select-livro').value;
-            perguntasAtuais = bancoPerguntas[livro] || [];
-            
-            if(perguntasAtuais.length === 0) {
-                alert("Em breve mais questões para este livro!");
-                return;
-            }
+        const divOpcoes = document.getElementById('opcoes-respostas');
+        divOpcoes.innerHTML = '';
 
-            indicePergunta = 0;
-            pontuacao = 0;
-            document.getElementById('area-resultado').style.display = 'none';
-            document.getElementById('area-pergunta').style.display = 'block';
-            carregarPergunta();
+        q.opcoes.forEach((opcao, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'opcao-btn';
+            btn.innerText = opcao;
+            btn.onclick = () => verificarResposta(i);
+            divOpcoes.appendChild(btn);
+        });
+    }
+
+    function verificarResposta(i) {
+        const q = perguntasAtuais[indicePergunta];
+        const feedback = document.getElementById('feedback');
+
+        if(i === q.correta) {
+            pontuacao++;
+            feedback.style.color = '#4caf50';
+            feedback.innerText = "Resposta Correta!";
+        } else {
+            feedback.style.color = '#f44336';
+            feedback.innerText = "Resposta Errada! A correta era: " + q.opcoes[q.correta];
         }
 
-        function carregarPergunta() {
-            document.getElementById('feedback').innerText = '';
-            const q = perguntasAtuais[indicePergunta];
-            document.getElementById('titulo-capitulo').innerText = q.capitulo;
-            document.getElementById('texto-pergunta').innerText = q.pergunta;
-
-            const divOpcoes = document.getElementById('opcoes-respostas');
-            divOpcoes.innerHTML = '';
-
-            q.opcoes.forEach((opcao, i) => {
-                const btn = document.createElement('button');
-                btn.className = 'opcao-btn';
-                btn.innerText = opcao;
-                btn.onclick = () => verificarResposta(i);
-                divOpcoes.appendChild(btn);
-            });
-        }
-
-        function verificarResposta(i) {
-            const q = perguntasAtuais[indicePergunta];
-            const feedback = document.getElementById('feedback');
-
-            if(i === q.correta) {
-                pontuacao++;
-                feedback.style.color = '#4caf50';
-                feedback.innerText = "Resposta Correta!";
+        setTimeout(() => {
+            indicePergunta++;
+            if(indicePergunta < perguntasAtuais.length) {
+                carregarPergunta();
             } else {
-                feedback.style.color = '#f44336';
-                feedback.innerText = "Resposta Errada! A correta era: " + q.opcoes[q.correta];
+                exibirResultado();
             }
+        }, 2000);
+    }
 
-            setTimeout(() => {
-                indicePergunta++;
-                if(indicePergunta < perguntasAtuais.length) {
-                    carregarPergunta();
-                } else {
-                    exibirResultado();
-                }
-            }, 2000);
+    function exibirResultado() {
+        document.getElementById('area-pergunta').style.display = 'none';
+        const resDiv = document.getElementById('area-resultado');
+        resDiv.style.display = 'block';
+
+        const porcentagem = Math.round((pontuacao / perguntasAtuais.length) * 100);
+        let nivel = "";
+        let classeCss = "";
+
+        if(porcentagem >= 80) {
+            nivel = "BOM - Excelente conhecimento da Palavra!";
+            classeCss = "resultado-bom";
+        } else if(porcentagem >= 50) {
+            nivel = "MÉDIO - Bom desempenho, continue estudando!";
+            classeCss = "resultado-medio";
+        } else {
+            nivel = "RUIM - Necessita dedicar-se mais à leitura da Palavra.";
+            classeCss = "resultado-ruim";
         }
 
-        function exibirResultado() {
-            document.getElementById('area-pergunta').style.display = 'none';
-            const resDiv = document.getElementById('area-resultado');
-            resDiv.style.display = 'block';
-
-            const porcentagem = Math.round((pontuacao / perguntasAtuais.length) * 100);
-            let nivel = "";
-            let classeCss = "";
-
-            if(porcentagem >= 80) {
-                nivel = "BOM - Excelente conhecimento da Palavra!";
-                classeCss = "resultado-bom";
-            } else if(porcentagem >= 50) {
-                nivel = "MÉDIO - Bom desempenho, continue estudando!";
-                classeCss = "resultado-medio";
-            } else {
-                nivel = "RUIM - Necessita dedicar-se mais à leitura da Palavra.";
-                classeCss = "resultado-ruim";
-            }
-
-            resDiv.className = "resultado-box " + classeCss;
-            resDiv.innerHTML = `<strong>Resultado Final:</strong> ${porcentagem}% de acertos.<br><strong>Classificação:</strong> ${nivel}`;
-        }
-    </script>
+        resDiv.className = "resultado-box " + classeCss;
+        resDiv.innerHTML = `<strong>Resultado Final:</strong> ${porcentagem}% de acertos.<br><strong>Classificação:</strong> ${nivel}`;
+    }
+</script>
 </body>
 </html>
 
