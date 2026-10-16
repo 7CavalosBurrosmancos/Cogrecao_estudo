@@ -31,15 +31,22 @@
             text-align: center;
         }
 
-        .emblema-header {
-            max-width: 180px;
+        .emblema-container {
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .emblema-svg {
+            width: 180px;
             height: auto;
+            max-width: 100%;
+            filter: drop-shadow(0px 0px 8px rgba(212, 175, 55, 0.4));
         }
 
         .slogan-principal {
             color: var(--ouro-principal);
-            font-size: 1.4rem;
-            margin-top: 10px;
+            font-size: 1.3rem;
+            margin-top: 15px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -151,7 +158,49 @@
 <body>
 
 <header>
-    <img src="logotipo-da-congregacao.png" alt="Comum Congregação em Jesus Cristo" class="emblema-header">
+    <div class="emblema-container">
+        <!-- Emblema Vetorizado Incorporado Directamente -->
+        <svg class="emblema-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ouroGradiente" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FBF5B7"/>
+                    <stop offset="25%" stop-color="#D4AF37"/>
+                    <stop offset="50%" stop-color="#AA7C11"/>
+                    <stop offset="75%" stop-color="#E6C65B"/>
+                    <stop offset="100%" stop-color="#8B6508"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Coroa Superior -->
+            <path d="M110,40 L125,60 L150,30 L175,60 L190,40 L180,75 L120,75 Z" fill="url(#ouroGradiente)"/>
+
+            <!-- Ramos de Louro Esquerda -->
+            <path d="M60,150 C50,110 80,70 110,60 C90,80 80,110 85,140 C75,120 65,135 60,150" fill="url(#ouroGradiente)"/>
+            <path d="M55,180 C45,140 65,100 90,80 C80,100 80,130 95,160 C80,150 70,165 55,180" fill="url(#ouroGradiente)"/>
+            
+            <!-- Ramos de Louro Direita -->
+            <path d="M240,150 C250,110 220,70 190,60 C210,80 220,110 215,140 C225,120 235,135 240,150" fill="url(#ouroGradiente)"/>
+            <path d="M245,180 C255,140 235,100 210,80 C220,100 220,130 205,160 C220,150 230,165 245,180" fill="url(#ouroGradiente)"/>
+
+            <!-- Círculo e Moldura -->
+            <circle cx="150" cy="150" r="110" fill="none" stroke="url(#ouroGradiente)" stroke-width="6"/>
+            <circle cx="150" cy="150" r="102" fill="none" stroke="url(#ouroGradiente)" stroke-width="2"/>
+
+            <!-- Templo/Fachada -->
+            <path d="M100,140 L150,110 L200,140 L195,145 L105,145 Z" fill="url(#ouroGradiente)"/>
+            <rect x="108" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
+            <rect x="125" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
+            <rect x="142" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
+            <rect x="159" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
+            <rect x="176" y="148" width="8" height="35" fill="url(#ouroGradiente)"/>
+            <rect x="102" y="183" width="96" height="8" fill="url(#ouroGradiente)"/>
+
+            <!-- Inscrições em Arco e Texto Integrado -->
+            <text x="150" y="98" font-family="'Georgia', serif" font-size="16" font-weight="bold" fill="url(#ouroGradiente)" text-anchor="middle">JESUS CRISTO</text>
+            <text x="150" y="215" font-family="'Georgia', serif" font-size="12" font-weight="bold" fill="url(#ouroGradiente)" text-anchor="middle">COMUM CONGREGAÇÃO</text>
+            <text x="150" y="235" font-family="'Georgia', serif" font-size="11" font-weight="bold" fill="url(#ouroGradiente)" text-anchor="middle">EM JESUS CRISTO</text>
+        </svg>
+    </div>
     <div class="slogan-principal">A Paz de Deus no grato amor de Jesus Cristo</div>
 </header>
 
@@ -286,7 +335,6 @@
 
             document.getElementById(idPagina).classList.add('ativo');
             
-            // Ativa o botão correto
             if(idPagina === 'pagina-inicio') document.getElementById('btn-inicio').classList.add('ativo');
             if(idPagina === 'pagina-quem-somos') document.getElementById('btn-quem-somos').classList.add('ativo');
             if(idPagina === 'pagina-cultos') document.getElementById('btn-cultos').classList.add('ativo');
@@ -294,7 +342,6 @@
             if(idPagina === 'pagina-contatos') document.getElementById('btn-contatos').classList.add('ativo');
         }
 
-        // Dados do Quiz do Novo Testamento
         const bancoPerguntas = {
             "Mateus": [
                 { capitulo: "Mateus Cap. 1", pergunta: "Qual é o tema principal do Capítulo 1 do Evangelho de Mateus?", opcoes: ["A genealogia de Jesus e o nascimento de Cristo", "O Sermão da Montanha", "O Batismo no Jordão", "A Parábola do Semeador"], correta: 0 },
