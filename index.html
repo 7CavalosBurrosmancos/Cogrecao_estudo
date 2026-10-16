@@ -190,8 +190,57 @@
 <body>
 
 <header>
-    <img src="./logotipo-da-congregacao.png" alt="Comum Congregação em Jesus Cristo" class="emblema-header">
+    <!-- Emblema Vetorial Dourado (Funciona SEMPRE, sem precisar de ficheiro de imagem) -->
+    <svg class="emblema-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" style="width: 220px; height: auto; margin: 0 auto; display: block; filter: drop-shadow(0px 0px 12px rgba(212, 175, 55, 0.4));">
+        <defs>
+            <linearGradient id="ouroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE680"/>
+                <stop offset="30%" stop-color="#D4AF37"/>
+                <stop offset="60%" stop-color="#AA7C11"/>
+                <stop offset="85%" stop-color="#E6C65B"/>
+                <stop offset="100%" stop-color="#8B6508"/>
+            </linearGradient>
+        </defs>
 
+        <!-- Coroa Superior -->
+        <path d="M120,30 L132,50 L150,20 L168,50 L180,30 L172,60 L128,60 Z" fill="url(#ouroGrad)"/>
+        <circle cx="120" cy="26" r="3" fill="#FFF"/>
+        <circle cx="150" cy="16" r="4" fill="#FFF"/>
+        <circle cx="180" cy="26" r="3" fill="#FFF"/>
+
+        <!-- Ramos de Louro Esquerda -->
+        <g fill="url(#ouroGrad)">
+            <path d="M50,130 C40,90 70,50 100,40 C80,60 70,90 75,120 C65,100 55,115 50,130 Z"/>
+            <path d="M45,160 C30,120 55,80 82,60 C70,80 70,110 88,140 C70,130 58,145 45,160 Z"/>
+            <path d="M55,190 C40,150 60,110 90,80 C80,100 85,130 105,160 C85,150 72,170 55,190 Z"/>
+        </g>
+
+        <!-- Ramos de Louro Direita -->
+        <g fill="url(#ouroGrad)">
+            <path d="M250,130 C260,90 230,50 200,40 C220,60 230,90 225,120 C235,100 245,115 250,130 Z"/>
+            <path d="M255,160 C270,120 245,80 218,60 C230,80 230,110 212,140 C230,130 242,145 255,160 Z"/>
+            <path d="M245,190 C260,150 240,110 210,80 C220,100 215,130 195,160 C215,150 228,170 245,190 Z"/>
+        </g>
+
+        <!-- Molduras Circulares Duplas -->
+        <circle cx="150" cy="135" r="90" fill="none" stroke="url(#ouroGrad)" stroke-width="5"/>
+        <circle cx="150" cy="135" r="82" fill="none" stroke="url(#ouroGrad)" stroke-width="1.5"/>
+
+        <!-- Templo / Casa de Oração -->
+        <polygon points="105,120 150,90 195,120 190,125 110,125" fill="url(#ouroGrad)"/>
+        <rect x="112" y="127" width="7" height="30" fill="url(#ouroGrad)"/>
+        <rect x="127" y="127" width="7" height="30" fill="url(#ouroGrad)"/>
+        <rect x="142" y="127" width="7" height="30" fill="url(#ouroGrad)"/>
+        <rect x="157" y="127" width="7" height="30" fill="url(#ouroGrad)"/>
+        <rect x="172" y="127" width="7" height="30" fill="url(#ouroGrad)"/>
+        <rect x="107" y="157" width="86" height="8" fill="url(#ouroGrad)"/>
+
+        <!-- Textos Internos no Brasão -->
+        <text x="150" y="80" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="url(#ouroGrad)" text-anchor="middle" letter-spacing="1">JESUS CRISTO</text>
+        <text x="150" y="178" font-family="'Georgia', serif" font-size="11" font-weight="bold" fill="url(#ouroGrad)" text-anchor="middle" letter-spacing="1">COMUM CONGREGAÇÃO</text>
+    </svg>
+
+    <!-- Slogan Dourado em 3 Linhas -->
     <div class="slogan-container">
         <div class="slogan-linha1">COMUM CONGREGAÇÃO</div>
         <div class="slogan-linha2">EM</div>
