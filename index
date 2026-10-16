@@ -1,4 +1,4 @@
-Compreendido perfeitamente, irmão Éber.Para que o slogan fique exatamente como na imagem do emblema que o irmão enviou:   COMUM CONGREGAÇÃO EM JESUS CRISTOCom as letras em tom dourado metálico, dispostas em três linhas abaixo do brasão, preparei o código HTML/CSS totalmente corrigido e ajustado.Solução Definitiva para o GitHub (index.html)Analisando a foto anterior da sua tela do GitHub, o ficheiro no seu repositório está gravado com o nome index (sem a extensão .html).   Siga estes passos simples para que funcione de primeira:No seu repositório no GitHub, abra o ficheiro index (ou index.htm) e clique no ícone do lápis para editar.   No topo da página, mude o nome do ficheiro para index.html.   Apague todo o conteúdo antigo e cole o código completo abaixo (que já inclui o vetor do emblema e a escrita exata do slogan COMUM CONGREGAÇÃO EM JESUS CRISTO em dourado).   HTML<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
