@@ -8,6 +8,7 @@
         :root {
             --ouro-principal: #d4af37;
             --ouro-claro: #f3e5ab;
+            --ouro-sombra: #8b6508;
             --fundo-escuro: #0a0a0a;
             --fundo-card: #141414;
             --texto-claro: #f5f5f5;
@@ -30,17 +31,15 @@
             text-align: center;
         }
 
-        .emblema-header {
-            max-width: 220px;
-            width: 100%;
+        .emblema-svg {
+            width: 220px;
             height: auto;
-            display: block;
-            margin: 0 auto;
-            filter: drop-shadow(0px 0px 10px rgba(212, 175, 55, 0.4));
+            max-width: 100%;
+            filter: drop-shadow(0px 0px 12px rgba(212, 175, 55, 0.4));
         }
 
         .slogan-container {
-            margin-top: 20px;
+            margin-top: 15px;
             text-align: center;
         }
 
@@ -51,6 +50,7 @@
             background: linear-gradient(180deg, #FFE680 0%, #D4AF37 50%, #8B6508 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
             text-transform: uppercase;
         }
 
@@ -72,6 +72,7 @@
             background: linear-gradient(180deg, #FFE680 0%, #D4AF37 50%, #8B6508 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
             text-transform: uppercase;
         }
 
@@ -132,10 +133,9 @@
 
         .destaque-presidencia {
             border-left: 4px solid var(--ouro-principal);
-            padding-left: 15px;
+            padding: 15px;
             margin: 20px 0;
             background-color: rgba(212, 175, 55, 0.05);
-            padding: 15px;
         }
 
         .quiz-container {
@@ -190,8 +190,8 @@
 <body>
 
 <header>
-    <!-- Emblema Vetorial Dourado (Funciona SEMPRE, sem precisar de ficheiro de imagem) -->
-    <svg class="emblema-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" style="width: 220px; height: auto; margin: 0 auto; display: block; filter: drop-shadow(0px 0px 12px rgba(212, 175, 55, 0.4));">
+    <!-- Brasão Vetorial Dourado (Garantido carregar em 100% dos telemóveis e PCs) -->
+    <svg class="emblema-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <linearGradient id="ouroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#FFE680"/>
@@ -325,7 +325,7 @@
 <!-- Página 4: Nossas Aulas Bíblicas & Quiz -->
 <div id="pagina-aulas" class="conteudo-pagina">
     <h2>Nossas Aulas Bíblicas & Quiz do Novo Testamento</h2>
-    <p>Espaço dedicado ao estudo dos temas dos capítulos dos livros do Novo Testamento para a edificação da irmandade e dos Operadores em Jesus Cristo.</p>
+    <p>Espaço dedicado ao estudo dos temas dos capítulos dos livros do Novo Testamento para a edificação da irmandade e dos Cooperadores em Jesus Cristo.</p>
 
     <div class="quiz-container">
         <h3>Questionário Bíblico por Livros e Capítulos</h3>
